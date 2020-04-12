@@ -1,0 +1,19 @@
+$about: about;
+
+.#{$about} {
+  display: flex;
+  justify-content: center;
+  padding-top: 117px;
+  text-align: center;
+  background-color: #f7f7f7;
+
+  &__icon {
+    max-width: 52px;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    max-width: 1095px;
+    line-height: 35px;
+  }
+}

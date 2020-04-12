@@ -1,0 +1,51 @@
+$twitter: twitter;
+
+.#{$twitter} {
+  overflow: hidden;
+  background-color: #f7f7f7;
+
+  &__swiper-container {
+    height: 100%;
+  }
+
+  &__container {
+    padding-top: 124px;
+    text-align: center;
+  }
+
+  &__icon {
+    max-width: 32px;
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: inherit;
+  }
+
+  &__text {
+    max-width: 1070px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  .swiper-pagination-bullets {
+    bottom: 68px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    border: 1px solid #a9afb3;
+    background-color: transparent;
+    transition: background-color .2s ease;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #a9afb3;
+  }
+}

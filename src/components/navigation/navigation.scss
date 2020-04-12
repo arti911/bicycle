@@ -1,0 +1,30 @@
+$navigation: navigation;
+
+.#{$navigation} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 35px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background-color .2s ease;
+
+  &--background {
+    background-color: rgba(255, 255, 255, .9);
+  }
+
+  &__link {
+    padding: 0 30px;
+    color: #4d4959;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
