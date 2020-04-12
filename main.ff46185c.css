@@ -511,7 +511,7 @@ input {
   left: 0;
   width: 100%;
   height: inherit;
-  background: url("/top.71e10213.jpg") no-repeat center/cover;
+  background: url("./top.71e10213.jpg") no-repeat center/cover;
   transition: transform 0.1s ease;
 }
 
