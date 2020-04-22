@@ -2,13 +2,42 @@ $work: work;
 
 .#{$work} {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 600px);
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 350px 500px) 350px;
   background-color: $color-white;
+  grid-template-areas: 
+    "img"
+    "content"  
+    "img1"
+    "content1"
+    "img2"
+    "content2"
+    "img3"
+    ;
+  
+  @media (min-width: $device-lg) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 600px);
+    grid-template-areas: 
+    "img content"
+    "content1 img1"
+    "img2 content2"
+    ;
+  }
+
+  @media (min-width: $device-xll) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 600px);
+    grid-template-areas: 
+    "img img content"
+    "content1 img1 img1"
+    "img2 content2 img3"
+    ;
+  }
 
   &__bike-detail {
     display: grid;
-    grid-template-rows: 400px 1fr;
+    grid-template-rows: auto 1fr;
     text-align: center;
 
     .#{work}__bike-detail-icon {
@@ -17,7 +46,7 @@ $work: work;
   }
 
   &__bike-detail-one {
-    grid-column: 3/4;
+    grid-area: content;
 
     .#{$work}__bike-detail-icon {
       max-width: 41px;
@@ -25,7 +54,7 @@ $work: work;
   }
 
   &__bike-detail-two {
-    grid-column: 1/2;
+    grid-area: content1;
 
     .#{$work}__bike-detail-icon {
       max-width: 32px;
@@ -33,6 +62,8 @@ $work: work;
   }
 
   &__bike-detail-three {
+    grid-area: content2;
+
     .#{$work}__bike-detail-icon {
       max-width: 23px;
     }
@@ -40,7 +71,7 @@ $work: work;
 
   &__bike-description {
     position: relative;
-    padding: 60px 65px 0;
+    padding: 60px 65px 85px;
     z-index: 1;
 
     &::after {
@@ -60,6 +91,7 @@ $work: work;
   }
 
   &__bike-descriptio-text {
+    max-width: 505px;
     margin-bottom: 40px;
     font-size: 16px;
     line-height: 30px;
@@ -85,7 +117,7 @@ $work: work;
   }
 
   &__bike-index-one {
-    grid-column: 1/3;
+    grid-area: img;
 
     .#{$work}__bike-index-icon {
       max-width: 113px;
@@ -93,7 +125,7 @@ $work: work;
   }
 
   &__bike-index-two {
-    grid-column: 2/4;
+    grid-area: img1;
 
     .#{work}__bike-index-icon {
       max-width: 177px;
@@ -101,6 +133,12 @@ $work: work;
   }
 
   &__bike-index-three {
+    grid-area: img2;
+
+    &--1 {
+      grid-area: img3;
+    }
+
     .#{$work}__bike-index-icon {
       max-width: 208px;
     }
