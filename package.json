@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/pages/index.pug --open",
-    "build": "parcel build src/pages/index.pug"
+    "build": "parcel build src/pages/index.pug --public-url ./ -d dist"
   },
   "author": "Papikyan Artur",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.0.0",
