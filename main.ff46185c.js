@@ -10450,6 +10450,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var menuBtn = Array.from(document.querySelectorAll('.navigation__link'));
 var sections = Array.from(document.querySelectorAll('.section'));
+var nav = document.querySelector('.navigation');
 
 var findSection = function findSection(value) {
   var i = null;
@@ -10469,6 +10470,7 @@ var scrolling = function scrolling() {
         block: 'start',
         behavior: 'smooth'
       });
+      nav.classList.remove('navigation--open');
     });
   });
 };
@@ -10530,7 +10532,26 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{"./isBgNavigation":"../scripts/isBgNavigation.js"}],"C:/Users/hafud/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./isBgNavigation":"../scripts/isBgNavigation.js"}],"../components/burger/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = toggleMenu;
+
+function toggleMenu() {
+  var burger = document.querySelector('.burger');
+  var close = document.querySelector('.navigation__close');
+  var nav = document.querySelector('.navigation');
+  burger.addEventListener('click', function () {
+    nav.classList.add('navigation--open');
+  });
+  close.addEventListener('click', function () {
+    nav.classList.remove('navigation--open');
+  });
+}
+},{}],"C:/Users/hafud/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -10617,6 +10638,8 @@ var _scrollSection = _interopRequireDefault(require("./scripts/scrollSection"));
 
 var _parallax = _interopRequireDefault(require("./scripts/parallax"));
 
+var _burger = _interopRequireDefault(require("./components/burger"));
+
 require("normalize.css");
 
 require("./main.scss");
@@ -10626,7 +10649,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _index.default)();
 (0, _scrollSection.default)();
 (0, _parallax.default)();
-},{"./blocks/twitter/index":"../blocks/twitter/index.js","./scripts/scrollSection":"../scripts/scrollSection.js","./scripts/parallax":"../scripts/parallax.js","normalize.css":"../../node_modules/normalize.css/normalize.css","./main.scss":"../main.scss"}],"C:/Users/hafud/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _burger.default)();
+},{"./blocks/twitter/index":"../blocks/twitter/index.js","./scripts/scrollSection":"../scripts/scrollSection.js","./scripts/parallax":"../scripts/parallax.js","./components/burger":"../components/burger/index.js","normalize.css":"../../node_modules/normalize.css/normalize.css","./main.scss":"../main.scss"}],"C:/Users/hafud/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10654,7 +10678,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "9196" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
