@@ -1,4 +1,8 @@
 .text {
-  font-size: 18px;
-  color: #848789;
+  font-size: rem(22);
+  color: $color-gray;
+
+  @media (min-width: $device-md) {
+    font-size: rem(18);
+  }
 }

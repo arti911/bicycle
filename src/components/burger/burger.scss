@@ -1,0 +1,31 @@
+$burger: burger;
+
+.#{$burger} {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  display: none;
+  z-index: 11;
+
+  @media (max-width: $device-tablet) {
+    display: block;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-rows: repeat(3, 3px);
+    gap: 2px;
+    margin-bottom: 5px;
+    transition: gap .2s linear;
+
+    span {
+      background-color: $color-dark;
+    }
+  }
+
+  &:hover {
+    .#{$burger}__wrap {
+      gap: 3px;
+    }
+  }
+}

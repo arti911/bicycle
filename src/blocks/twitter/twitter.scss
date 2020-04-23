@@ -1,44 +1,49 @@
 $twitter: twitter;
 
 .#{$twitter} {
+  display: flex;
   overflow: hidden;
-  background-color: #f7f7f7;
+  background-color: $color-false-white;
 
-  &__swiper-container {
-    height: 100%;
+  @media (min-width: $device-xll) {
+    min-height: rem(470);
   }
 
   &__container {
-    padding-top: 124px;
+    padding: rem(124) 15px;
     text-align: center;
+
+    @media (min-width: $device-xll) {
+      padding: rem(124) 0 0;
+    }
   }
 
   &__icon {
-    max-width: 32px;
-    margin-bottom: 35px;
+    max-width: rem(32);
+    margin-bottom: rem(35);
   }
 
   &__title {
-    margin-bottom: 25px;
+    margin-bottom: rem(25);
     letter-spacing: 1px;
     text-transform: inherit;
   }
 
   &__text {
-    max-width: 1070px;
+    max-width: rem(1070);
     margin: 0 auto;
     font-weight: 400;
     font-style: italic;
-    font-size: 24px;
+    font-size: rem(24);
   }
 
   .swiper-pagination-bullets {
-    bottom: 68px;
+    bottom: rem(68);
   }
 
   .swiper-pagination-bullet {
-    width: 11px;
-    height: 11px;
+    width: rem(11);
+    height: rem(11);
     border: 1px solid #a9afb3;
     background-color: transparent;
     transition: background-color .2s ease;

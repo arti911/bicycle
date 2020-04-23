@@ -1,9 +1,13 @@
 $top: top;
 
 .#{$top} {
-  height: 800px;
+  height: calc(100vh - 75px);
   overflow: hidden;
   z-index: -1;
+
+  @media (min-width: $device-xl) {
+    height: rem(800);
+  }
 
   &__images {
     position: fixed;

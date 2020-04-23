@@ -2,44 +2,61 @@ $footer: footer;
 
 .#{$footer} {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 250px;
-  background-color: #f7f7f7;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: rem(250);
+  padding: 0 15px;
+  align-items: center;
+  justify-items: center;
+  background-color: $color-false-white;
 
-  &__wrap {
-    &--no-inline{
-      display: flex;
-    }
+  @media (min-width: $device-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $device-lg) {
+    padding: 0;
   }
 
   &__address {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 45px;
-    color: #848789;
+    justify-self: end;
+    padding-right: rem(45);
+    color: $color-gray;
   }
 
   &__text {
     font-weight: 400;
     font-style: italic;
-    font-size: 14px;
+    font-size: rem(20);
+
+    @media (min-width: $device-md) {
+      font-size: rem(18);
+    }
+
+    @media (min-width: $device-lg) {
+      font-size: rem(14);
+    }
 
     &--big {
       font-weight: 700;
       font-style: normal;
-      font-size: 16px;
+      font-size: rem(22);
+
+      @media (min-width: $device-md) {
+        font-size: rem(20);
+      }
+
+      @media (min-width: $device-lg) {
+        font-size: rem(16);
+      }
     }
 
     a {
-      color: #848789;
+      color: $color-gray;
     }
   }
 
   &__social {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__link {

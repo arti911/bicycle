@@ -1,15 +1,19 @@
 $title: title;
 
 .#{$title} {
-  margin-bottom: 10px;
+  margin-bottom: rem(10);
   font-weight: 700;
-  font-size: 18px;
+  font-size: rem(24);
   letter-spacing: 2px;
-  color: #353738;
+  color: $color-dark;
   text-transform: uppercase;
+
+  @media (min-width: $device-md) {
+    font-size: rem(18);
+  }
 
   span {
     font-weight: 300;
-    color: #848789;
+    color: $color-gray;
   }
 }

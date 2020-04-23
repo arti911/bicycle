@@ -3,17 +3,25 @@ $about: about;
 .#{$about} {
   display: flex;
   justify-content: center;
-  padding-top: 117px;
+  padding: rem(60) 15px;
   text-align: center;
-  background-color: #f7f7f7;
+  background-color: $color-false-white;
+
+  @media (min-width: $device-lg) {
+    padding: rem(117) 0;
+  }
+
+  @media (min-width: $device-xll) {
+    min-height: rem(470);
+  }
 
   &__icon {
-    max-width: 52px;
-    margin-bottom: 35px;
+    max-width: rem(52);
+    margin-bottom: rem(35);
   }
 
   &__text {
-    max-width: 1095px;
-    line-height: 35px;
+    max-width: rem(1095);
+    line-height: rem(35);
   }
 }

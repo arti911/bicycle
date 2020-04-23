@@ -4,35 +4,50 @@ $mailing: mailing;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  padding: rem(60) 15px;
+  background-color: $color-white;
+
+  @media (min-width: $device-lg) {
+    padding: rem(120) 0;
+  }
+
+  @media (min-width: $device-xll) {
+    min-height: rem(470);
+    padding: 0;
+  }
 
   &__container {
-    max-width: 534px;
+    max-width: rem(534);
     width: 100%;
     text-align: center;
   }
 
   &__text {
-    margin-bottom: 35px;
+    margin-bottom: rem(35);
     font-weight: 400;
     font-style: italic;
-    font-size: 24px;
-    color: #848789;
+    font-size: rem(24);
+    color: $color-gray;
   }
 
   &__form {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px 50px;
     gap: 8px;
+
+    @media (min-width: $device-md) {
+      grid-template-columns: rem(400) 1fr;
+      grid-template-rows: 70px;
+    }
   }
 
   &__input {
-    height: 70px;
-    padding: 0 27px;
+    padding: 0 rem(27);
     border: 1px solid #d3d7d9;
     font-weight: 400;
     font-style: italic;
-    font-size: 20px;
+    font-size: rem(20);
     color: #929292;
 
     &::-moz-placeholder {
@@ -48,15 +63,15 @@ $mailing: mailing;
 
   &__btn {
     font-weight: 300;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: rem(24);
+    line-height: rem(24);
     text-transform: uppercase;
-    color: #fff;
+    color: $color-white;
     background-color: #64c29e;
     cursor: pointer;
   }
 
   .logo {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
   }
 }

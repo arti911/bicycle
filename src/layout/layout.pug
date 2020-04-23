@@ -4,12 +4,13 @@ block variables
 html(lang="en")
 	head
 		meta(charset="UTF-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="viewport", content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		title=name
 		link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
 	body
 		include ../components/navigation/navigation.pug
+		include ../components/burger/burger.pug
 		main.main
 			block content
 		include ../components/footer/footer.pug

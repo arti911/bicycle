@@ -6,12 +6,20 @@
 
 html {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   font-family: $font-lato;
+  
+  @media (min-width: $device-md) {
+    font-size: 12px;
+  }
 
-	@media (min-width: $device-xl) {
-    font-size: 13px;
+  @media (min-width: $device-lg) {
+    font-size: 14px;
 	}
+
+  @media (min-width: $device-xll) {
+    font-size: 16px;
+  }
 }
 
 body {
@@ -52,5 +60,7 @@ input {
 }
 
 .section {
-  scroll-margin: 155px;
+  @media (min-width: $device-tablet) {
+    scroll-margin: 155px;
+  }
 }

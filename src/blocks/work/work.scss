@@ -3,7 +3,7 @@ $work: work;
 .#{$work} {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(3, 350px 500px) 350px;
+  grid-template-rows: repeat(3, rem(350) auto) rem(350);
   background-color: $color-white;
   grid-template-areas: 
     "img"
@@ -17,7 +17,7 @@ $work: work;
   
   @media (min-width: $device-lg) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 600px);
+    grid-template-rows: repeat(3, rem(600));
     grid-template-areas: 
     "img content"
     "content1 img1"
@@ -27,7 +27,7 @@ $work: work;
 
   @media (min-width: $device-xll) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 600px);
+    grid-template-rows: repeat(3, rem(600));
     grid-template-areas: 
     "img img content"
     "content1 img1 img1"
@@ -41,7 +41,7 @@ $work: work;
     text-align: center;
 
     .#{work}__bike-detail-icon {
-      margin-bottom: 30px;
+      margin-bottom: rem(30);
     }
   }
 
@@ -49,7 +49,7 @@ $work: work;
     grid-area: content;
 
     .#{$work}__bike-detail-icon {
-      max-width: 41px;
+      max-width: rem(41);
     }
   }
 
@@ -57,7 +57,7 @@ $work: work;
     grid-area: content1;
 
     .#{$work}__bike-detail-icon {
-      max-width: 32px;
+      max-width: rem(32);
     }
   }
 
@@ -65,19 +65,23 @@ $work: work;
     grid-area: content2;
 
     .#{$work}__bike-detail-icon {
-      max-width: 23px;
+      max-width: rem(23);
     }
   }
 
   &__bike-description {
     position: relative;
-    padding: 60px 65px 85px;
+    padding: rem(50) 15px;
     z-index: 1;
+    
+    @media (min-width: $device-lg) {
+      padding: rem(60) rem(65) rem(85);      
+    }
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -12px;
+      bottom: rem(-12);
       left: 50%;
       transform: rotate(45deg) translateX(-50%);
       width: 24px;
@@ -91,11 +95,22 @@ $work: work;
   }
 
   &__bike-descriptio-text {
-    max-width: 505px;
-    margin-bottom: 40px;
-    font-size: 16px;
-    line-height: 30px;
+    margin-bottom: rem(40);
+    font-size: rem(22);
+    line-height: rem(30);
     text-align: justify;
+
+    @media (min-width: $device-md) {
+      font-size: rem(20);
+    }
+
+    @media (min-width: $device-lg) {
+      font-size: rem(18);
+    }
+
+    @media (min-width: $device-xll) {
+      font-size: rem(16);
+    }
   }
 
   &__bike-description-line {
@@ -120,7 +135,7 @@ $work: work;
     grid-area: img;
 
     .#{$work}__bike-index-icon {
-      max-width: 113px;
+      max-width: rem(113);
     }
   }
 
@@ -128,7 +143,7 @@ $work: work;
     grid-area: img1;
 
     .#{work}__bike-index-icon {
-      max-width: 177px;
+      max-width: rem(177);
     }
   }
 
@@ -140,7 +155,7 @@ $work: work;
     }
 
     .#{$work}__bike-index-icon {
-      max-width: 208px;
+      max-width: rem(208);
     }
   }
 

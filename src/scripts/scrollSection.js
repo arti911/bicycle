@@ -1,5 +1,6 @@
 const menuBtn = Array.from(document.querySelectorAll('.navigation__link'));
 const sections = Array.from(document.querySelectorAll('.section'));
+const nav = document.querySelector('.navigation');
 
 const findSection = value => {
   let i = null;
@@ -18,6 +19,7 @@ const scrolling = () => {
     btn.addEventListener('click', () => {
       const index = findSection(btn.getAttribute('id'));
       sections[index].scrollIntoView({ block: 'start', behavior: 'smooth' });
+      nav.classList.remove('navigation--open');
     });
   });
 };
