@@ -16,7 +16,7 @@ $work: work;
     ;
   
   @media (min-width: $device-lg) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(50%, 50%));
     grid-template-rows: repeat(3, rem(600));
     grid-template-areas: 
     "img content"
@@ -26,13 +26,20 @@ $work: work;
   }
 
   @media (min-width: $device-xll) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33.3333%);
     grid-template-rows: repeat(3, rem(600));
     grid-template-areas: 
     "img img content"
     "content1 img1 img1"
     "img2 content2 img3"
     ;
+  }
+
+  &__hidden {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__bike-detail {
@@ -128,6 +135,12 @@ $work: work;
 
     .#{$work}__bike-index-icon {
       z-index: 9;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 

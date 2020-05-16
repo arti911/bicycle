@@ -1,7 +1,7 @@
 $top: top;
 
 .#{$top} {
-  height: calc(100vh - 75px);
+  height: calc(100vh / 1.5);
   overflow: hidden;
   z-index: -1;
 

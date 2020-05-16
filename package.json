@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/pages/index.pug --open",
-    "build": "parcel build src/pages/index.pug --public-url ./ -d dist"
+    "build": "parcel build src/pages/index.pug",
+    "deploy": "npm run build && gh-pages -d dist"
   },
+  "homepage": "https://arti911.github.io/bicycle",
   "author": "Papikyan Artur",
   "license": "ISC",
   "devDependencies": {
@@ -16,6 +18,7 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^1.18.2",
     "pug": "^2.0.4",
     "sass": "^1.22.9",
@@ -24,9 +27,13 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.1",
+    "gh-pages": "^2.2.0",
+    "gsap": "^3.2.6",
+    "hover-effect": "^1.1.0",
     "normalize.css": "^8.0.1",
     "stylelint": "^10.1.0",
     "stylelint-scss": "^3.10.0",
-    "swiper": "^5.3.7"
+    "swiper": "^5.3.7",
+    "three": "^0.116.1"
   }
 }
