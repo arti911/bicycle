@@ -13,27 +13,27 @@
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^1.18.2",
-    "pug": "^2.0.4",
-    "sass": "^1.22.9",
+    "prettier": "^2.1.2",
+    "pug": "^3.0.0",
+    "sass": "^1.26.11",
     "stylelint-config-airbnb": "0.0.0",
-    "stylelint-config-recommended": "^2.2.0"
+    "stylelint-config-recommended": "^3.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.1",
-    "gh-pages": "^2.2.0",
-    "gsap": "^3.2.6",
+    "@fortawesome/fontawesome-free": "^5.15.0",
+    "gh-pages": "^3.1.0",
+    "gsap": "^3.5.1",
     "hover-effect": "^1.1.0",
     "normalize.css": "^8.0.1",
-    "stylelint": "^10.1.0",
-    "stylelint-scss": "^3.10.0",
-    "swiper": "^5.3.7",
-    "three": "^0.116.1"
+    "stylelint": "^13.7.2",
+    "stylelint-scss": "^3.18.0",
+    "swiper": "^6.3.2",
+    "three": "^0.121.1"
   }
 }
